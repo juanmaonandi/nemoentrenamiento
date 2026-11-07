@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemo - Maldonado - Punta del Este - Uruguay | Todo tu ser en movimiento</title>
+  <meta name="description" content="NEMO Entrenamiento es un espacio social, cultural y deportivo en Maldonado, Punta del Este y Punta Ballena, Uruguay. Funcional fútbol, femenino, educación deportiva, metodología integral y tienda oficial." />
+  
+  <!-- Favicon SVG con isotipo NEMO -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230284c7'/><circle cx='50' cy='50' r='20' fill='%23ffffff'/><circle cx='28' cy='35' r='8' fill='%23bae6fd'/><circle cx='72' cy='35' r='8' fill='%23bae6fd'/><circle cx='35' cy='70' r='8' fill='%23bae6fd'/><circle cx='65' cy='70' r='8' fill='%23bae6fd'/><line x1='28' y1='35' x2='50' y2='50' stroke='%23ffffff' stroke-width='3'/><line x1='72' y1='35' x2='50' y2='50' stroke='%23ffffff' stroke-width='3'/><line x1='35' y1='70' x2='50' y2='50' stroke='%23ffffff' stroke-width='3'/><line x1='65' y1='70' x2='50' y2='50' stroke='%23ffffff' stroke-width='3'/></svg>" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celeste: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-sky-200 selection:text-sky-900">
+
+  <!-- ========================================================================= -->
+  <!-- BARRA SUPERIOR DESTACADA DE UBICACIÓN -->
+  <!-- ========================================================================= -->
+  <div class="bg-slate-900 text-sky-200 py-1.5 px-4 text-center text-xs sm:text-sm font-semibold tracking-wider border-b border-slate-800">
+    <span class="inline-flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+      <span>Nemo - Maldonado - Punta del Este - Uruguay</span>
+    </span>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HEADER FIJO Y LIMPIO (CON ENLACE A TIENDA) -->
+  <!-- ========================================================================= -->
+  <header id="main-header" class="sticky top-0 left-0 right-0 z-50 glass-header py-3.5 px-4 sm:px-8 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo NEMO -->
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-600 to-sky-400 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18"/>
+            <path d="M3 12h18"/>
+            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-black tracking-widest text-slate-900 group-hover:text-sky-600 transition-colors leading-tight">NEMO</span>
+          <span class="text-[9px] font-bold tracking-wider text-sky-600 uppercase">Entrenamiento</span>
+        </div>
+      </a>
+
+      <!-- Menú Desktop -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-slate-700">
+        <a href="#inicio" class="hover:text-sky-600 transition-colors">Inicio</a>
+        <a href="#que-es-nemo" class="hover:text-sky-600 transition-colors">NEMO</a>
+        <a href="#historia" class="hover:text-sky-600 transition-colors">Historia</a>
+        <a href="#filosofia" class="hover:text-sky-600 transition-colors">Filosofía</a>
+        <a href="#metodologia" class="hover:text-sky-600 transition-colors">Metodología</a>
+        <a href="#entrenamientos" class="hover:text-sky-600 transition-colors">Entrenamientos</a>
+        <a href="#tienda" class="text-sky-700 font-extrabold flex items-center gap-1.5 bg-sky-50 px-3 py-1 rounded-full border border-sky-200 hover:bg-sky-600 hover:text-white transition-all shadow-sm">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>TIENDA</span>
+        </a>
+        <a href="#equipo" class="hover:text-sky-600 transition-colors">Equipo</a>
+        <a href="#horarios" class="hover:text-sky-600 transition-colors">Horarios</a>
+        <a href="#galeria" class="hover:text-sky-600 transition-colors">Galería</a>
+        <a href="#contacto" class="hover:text-sky-600 transition-colors">Contacto</a>
+      </nav>
+
+      <!-- Botón Destacado & Redes Desktop -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a data-ig-link href="#" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 hover:bg-sky-100 hover:text-sky-600 transition-colors" title="Instagram @nemoentrenamiento">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+        </a>
+        <a data-wpp-btn href="#" class="btn-celeste text-xs py-2.5 px-5">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>QUIERO ENTRENAR</span>
+        </a>
+      </div>
+
+      <!-- Botón Menú Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-800 hover:text-sky-600 focus:outline-none" aria-label="Abrir menú">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer & Backdrop -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-white z-50 p-6 flex flex-col justify-between shadow-2xl translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl bg-sky-600 text-white flex items-center justify-center font-black text-sm">N</div>
+          <div>
+            <span class="font-black text-lg tracking-wider text-slate-900 block leading-tight">NEMO</span>
+            <span class="text-[10px] text-sky-600 font-bold uppercase">Maldonado · Punta del Este</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-900" aria-label="Cerrar menú">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-3 py-6 text-base font-semibold text-slate-700">
+        <a href="#inicio" class="mobile-nav-link hover:text-sky-600 py-1">Inicio</a>
+        <a href="#que-es-nemo" class="mobile-nav-link hover:text-sky-600 py-1">¿Qué es NEMO?</a>
+        <a href="#historia" class="mobile-nav-link hover:text-sky-600 py-1">Nuestra Historia</a>
+        <a href="#filosofia" class="mobile-nav-link hover:text-sky-600 py-1">Filosofía</a>
+        <a href="#metodologia" class="mobile-nav-link hover:text-sky-600 py-1">Metodología</a>
+        <a href="#entrenamientos" class="mobile-nav-link hover:text-sky-600 py-1">Entrenamientos</a>
+        <a href="#tienda" class="mobile-nav-link text-sky-600 font-extrabold flex items-center gap-2 py-1 bg-sky-50 px-3 rounded-xl border border-sky-200">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>TIENDA OFICIAL</span>
+        </a>
+        <a href="#equipo" class="mobile-nav-link hover:text-sky-600 py-1">Equipo</a>
+        <a href="#horarios" class="mobile-nav-link hover:text-sky-600 py-1">Horarios</a>
+        <a href="#galeria" class="mobile-nav-link hover:text-sky-600 py-1">Galería</a>
+        <a href="#contacto" class="mobile-nav-link hover:text-sky-600 py-1">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+      <a data-wpp-btn href="#" class="btn-celeste w-full text-center text-sm py-3">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>QUIERO ENTRENAR</span>
+      </a>
+      <div class="flex items-center justify-center gap-4 text-xs text-slate-500 pt-2">
+        <a data-ig-link href="#" class="flex items-center gap-1 hover:text-sky-600">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          <span>@nemoentrenamiento</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HERO / PORTADA POTENTE -->
+  <!-- ========================================================================= -->
+  <section id="inicio" class="hero-wrapper">
+    <img src="assets/images/funcional_futbol.jpg" alt="NEMO Entrenamiento en movimiento" class="hero-img" />
+    <div class="hero-bg-overlay"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-20 pb-16 flex flex-col items-center">
+      
+      <!-- Badge Superior -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-sky-300 text-xs sm:text-sm font-bold uppercase tracking-widest mb-6">
+        <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+        <span>Nemo - Maldonado - Punta del Este - Uruguay</span>
+      </div>
+
+      <!-- Título Principal Grande -->
+      <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-tight uppercase leading-none mb-4 text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-sky-200">
+        NEMO
+      </h1>
+
+      <!-- Subtítulo Concepto Principal -->
+      <h2 class="text-xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-wider text-sky-300 mb-6 max-w-3xl">
+        TODO TU SER EN MOVIMIENTO
+      </h2>
+
+      <!-- Texto Secundario -->
+      <p class="text-base sm:text-xl md:text-2xl font-light tracking-wide text-slate-200 max-w-2xl mb-10 leading-relaxed">
+        Entrenar. Jugar. Compartir. Divertirse
+      </p>
+
+      <!-- Botones Principales -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+        <a data-wpp-btn href="#" class="btn-celeste text-base py-4 px-8 w-full sm:w-auto">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>QUIERO ENTRENAR</span>
+        </a>
+        <a href="#que-es-nemo" class="btn-white text-base py-4 px-8 w-full sm:w-auto">
+          <span>CONOCÉ NEMO</span>
+          <i data-lucide="arrow-down" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+      <!-- Stats: Metodología integral | Para todo público | Desde 2020 -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-16 pt-8 border-t border-white/15 w-full max-w-3xl text-center">
+        <div class="bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+          <span class="block text-xl sm:text-2xl font-black text-sky-300 mb-1">Metodología integral</span>
+          <span class="text-xs text-slate-300 uppercase tracking-wider">Todo tu ser en Movimiento</span>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+          <span class="block text-xl sm:text-2xl font-black text-sky-300 mb-1">Para todo público</span>
+          <span class="text-xs text-slate-300 uppercase tracking-wider">Sin importar tu nivel</span>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+          <span class="block text-lg sm:text-xl font-black text-sky-300 mb-1">Desde 2020 con una propuesta única</span>
+          <span class="text-xs text-slate-300 uppercase tracking-wider">Trayectoria y Comunidad</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- ¿QUÉ ES NEMO? (Mucho más que entrenar) -->
+  <!-- ========================================================================= -->
+  <section id="que-es-nemo" class="relative py-24 sm:py-32 px-6 overflow-hidden bg-gradient-to-b from-white via-sky-50/40 to-white">
+    <canvas id="neural-canvas"></canvas>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Texto Conceptual -->
+        <div class="lg:col-span-6 reveal">
+          <span class="badge-celeste mb-4">Espacio Social, Cultural y Deportivo</span>
+          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+            Mucho más que <span class="text-sky-600">entrenar</span>
+          </h2>
+          
+          <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
+            <p class="text-lg font-medium text-slate-800">
+              NEMO es un espacio social, cultural y deportivo que busca brindar una experiencia disfrutable a través del movimiento.
+            </p>
+            <p>
+              Creemos en el deporte como herramienta para encontrarnos, sentirnos mejor y disfrutar junto a otros/as. El fútbol forma parte de nuestra cultura y puede acercar personas, generaciones y realidades diferentes. <strong>Creemos en un deporte integrador para todos/as las personas.</strong>
+            </p>
+          </div>
+
+          <!-- Puntos destacados -->
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                <i data-lucide="users" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-slate-800">Comunidad &amp; Vínculos</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-slate-800">Salud &amp; Bienestar</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-slate-800">Fútbol Integrador</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-slate-800">Mirada Pedagógica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Composición Visual Abstracta & Neuronal -->
+        <div class="lg:col-span-6 reveal">
+          <div class="relative bg-white/90 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-sky-100 shadow-xl overflow-hidden">
+            <div class="absolute -right-20 -top-20 w-64 h-64 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-sky-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 text-center py-2">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-sky-600 via-sky-500 to-sky-400 text-white flex items-center justify-center shadow-lg shadow-sky-500/25">
+                <i data-lucide="activity" class="w-10 h-10 animate-pulse"></i>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mb-2">TODO TU SER EN MOVIMIENTO</h3>
+              <p class="text-sky-600 text-base font-bold mb-6 tracking-wide">Deporte, diversión, amistad.</p>
+              
+              <blockquote class="bg-sky-50/70 p-6 rounded-2xl border-l-4 border-sky-600 text-slate-800 text-base italic leading-relaxed text-left">
+                "NEMO entiende a la persona de manera integral. Nos interesa entrenar, aprender, jugar, compartir y generar vínculos que perduran."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- NUESTRA HISTORIA (Línea de tiempo 2020 - 2026) -->
+  <!-- ========================================================================= -->
+  <section id="historia" class="py-24 sm:py-32 px-6 bg-slate-50 relative">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-24 reveal">
+        <span class="badge-celeste mb-3">Evolución &amp; Crecimiento</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Nuestra Historia
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Un recorrido continuo de crecimiento, pasión y consolidación del deporte como puente humano en Maldonado y Punta del Este.
+        </p>
+      </div>
+
+      <!-- Timeline Track -->
+      <div class="timeline-track" id="historia-container">
+        <!-- Generado dinámicamente con JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- NUESTRA FILOSOFÍA (Entrenamos personas · 4 Pilares) -->
+  <!-- ========================================================================= -->
+  <section id="filosofia" class="py-24 sm:py-32 px-6 bg-white relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-4xl mx-auto mb-16 sm:mb-20 reveal">
+        <span class="badge-celeste mb-3">Filosofía NEMO</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Entrenamos personas
+        </h2>
+        <p class="text-slate-700 text-base sm:text-xl font-medium leading-relaxed">
+          Entendemos a la persona como un todo. Nuestra propuesta combina armónicamente actividad física, deporte, aprendizaje, disfrute y estimulamos buenas relaciones humanas.
+        </p>
+      </div>
+
+      <!-- 4 Grandes Conceptos Visuales -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="filosofia-container">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- METODOLOGÍA NEMO (Diagrama de Venn 3 Círculos: SOCIOAFECTIVO + JUEGO + FUNCIONAL = NEMO/LA PERSONA) -->
+  <!-- ========================================================================= -->
+  <section id="metodologia" class="py-24 sm:py-32 px-6 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-sky-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Encabezado de Metodología -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <span class="bg-sky-500/20 text-sky-300 border border-sky-400/30 text-xs font-bold uppercase px-3.5 py-1.5 rounded-full tracking-wider mb-4 inline-block">
+          Marco Metodológico Integrado
+        </span>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-4 text-white">
+          METODOLOGÍA NEMO
+        </h2>
+        <h3 class="text-xl sm:text-2xl text-sky-300 font-bold mb-3">
+          Entrenar a la persona como un todo
+        </h3>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Nuestra metodología integra tres dimensiones que están presentes y se relacionan en cada experiencia de entrenamiento:
+        </p>
+      </div>
+
+      <!-- Grid Principal: Diagrama de Venn a la izquierda y Detalle Interactivo a la derecha -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        
+        <!-- Diagrama de Venn Interactivo SVG -->
+        <div class="lg:col-span-6 flex flex-col items-center reveal">
+          <div class="relative w-full max-w-[440px] aspect-square flex items-center justify-center">
+            
+            <svg class="w-full h-full drop-shadow-2xl" viewBox="0 0 500 500">
+              <defs>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <!-- Círculo 1: SOCIOAFECTIVO (Arriba) -->
+              <g class="cursor-pointer group" onclick="selectVennSection('socioafectivo')">
+                <circle 
+                  id="svg-circle-socioafectivo"
+                  cx="250" cy="175" r="130" 
+                  fill="#0284c7" fill-opacity="0.38" 
+                  stroke="#38bdf8" stroke-width="2.5" 
+                  class="venn-svg-circle transition-all duration-300 group-hover:fill-opacity-50" 
+                />
+                <text x="250" y="115" text-anchor="middle" fill="#ffffff" font-weight="900" font-size="16" letter-spacing="1">SOCIOAFECTIVO</text>
+                <text x="250" y="135" text-anchor="middle" fill="#bae6fd" font-size="11" font-weight="600">Sentirse parte</text>
+              </g>
+
+              <!-- Círculo 2: JUEGO (Abajo Izquierda) -->
+              <g class="cursor-pointer group" onclick="selectVennSection('juego')">
+                <circle 
+                  id="svg-circle-juego"
+                  cx="180" cy="305" r="130" 
+                  fill="#0ea5e9" fill-opacity="0.38" 
+                  stroke="#38bdf8" stroke-width="2.5" 
+                  class="venn-svg-circle transition-all duration-300 group-hover:fill-opacity-50" 
+                />
+                <text x="145" y="340" text-anchor="middle" fill="#ffffff" font-weight="900" font-size="16" letter-spacing="1">JUEGO</text>
+                <text x="145" y="360" text-anchor="middle" fill="#bae6fd" font-size="11" font-weight="600">Aprender &amp; disfrutar</text>
+              </g>
+
+              <!-- Círculo 3: FUNCIONAL (Abajo Derecha) -->
+              <g class="cursor-pointer group" onclick="selectVennSection('funcional')">
+                <circle 
+                  id="svg-circle-funcional"
+                  cx="320" cy="305" r="130" 
+                  fill="#38bdf8" fill-opacity="0.35" 
+                  stroke="#7dd3fc" stroke-width="2.5" 
+                  class="venn-svg-circle transition-all duration-300 group-hover:fill-opacity-50" 
+                />
+                <text x="355" y="340" text-anchor="middle" fill="#ffffff" font-weight="900" font-size="16" letter-spacing="1">FUNCIONAL</text>
+                <text x="355" y="360" text-anchor="middle" fill="#bae6fd" font-size="11" font-weight="600">Moverse mejor</text>
+              </g>
+
+              <!-- Intersección Central: NEMO / LA PERSONA -->
+              <g class="cursor-pointer group" onclick="selectVennSection('centro')">
+                <circle 
+                  cx="250" cy="265" r="54" 
+                  fill="#0284c7" 
+                  stroke="#ffffff" stroke-width="3.5" 
+                  filter="url(#glow)"
+                  class="transition-transform duration-300 group-hover:scale-105" 
+                />
+                <circle cx="250" cy="265" r="48" fill="#0f172a" fill-opacity="0.6" />
+                <text x="250" y="258" text-anchor="middle" fill="#38bdf8" font-weight="900" font-size="13" letter-spacing="2">NEMO</text>
+                <text x="250" y="278" text-anchor="middle" fill="#ffffff" font-weight="800" font-size="10" letter-spacing="0.5">LA PERSONA</text>
+              </g>
+            </svg>
+
+          </div>
+
+          <!-- Botones selectores rápidos -->
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button onclick="selectVennSection('socioafectivo')" data-venn-id="socioafectivo" class="venn-circle-btn px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-700 bg-slate-800 text-sky-200 hover:border-sky-400 transition-all">
+              Socioafectivo
+            </button>
+            <button onclick="selectVennSection('juego')" data-venn-id="juego" class="venn-circle-btn px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-700 bg-slate-800 text-sky-200 hover:border-sky-400 transition-all">
+              Juego
+            </button>
+            <button onclick="selectVennSection('funcional')" data-venn-id="funcional" class="venn-circle-btn px-3.5 py-1.5 rounded-full text-xs font-bold border border-slate-700 bg-slate-800 text-sky-200 hover:border-sky-400 transition-all">
+              Funcional
+            </button>
+            <button onclick="selectVennSection('centro')" data-venn-id="centro" class="venn-circle-btn active px-3.5 py-1.5 rounded-full text-xs font-bold border border-sky-400 bg-sky-500/20 text-white transition-all">
+              ★ NEMO / La Persona
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel de Detalle Dinámico -->
+        <div class="lg:col-span-6 reveal" id="metodologia-detail">
+          <!-- Renderizado con JavaScript -->
+        </div>
+
+      </div>
+
+      <!-- Resumen de las 3 Dimensiones en Tarjetas Informativas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-800 reveal">
+        
+        <!-- Tarjeta 1: Socioafectivo -->
+        <div class="bg-slate-800/60 p-6 rounded-3xl border border-slate-700 hover:border-sky-500 transition-all">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-600/30 text-sky-300 flex items-center justify-center font-bold">
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">SOCIOAFECTIVO</h4>
+          </div>
+          <p class="text-xs text-sky-300 font-semibold mb-2">Sentirse parte también es parte de entrenar.</p>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Espacio de confianza, respeto e integración. La comunicación, cooperación y sentido de pertenencia son fundamentales.
+          </p>
+          <div class="text-[11px] font-bold text-sky-400 tracking-wider uppercase">
+            Conectar · Compartir · Pertenecer
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Juego -->
+        <div class="bg-slate-800/60 p-6 rounded-3xl border border-slate-700 hover:border-sky-500 transition-all">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-600/30 text-sky-300 flex items-center justify-center font-bold">
+              <i data-lucide="target" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">JUEGO</h4>
+          </div>
+          <p class="text-xs text-sky-300 font-semibold mb-2">Jugamos para movernos, aprender y disfrutar.</p>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            El juego entendido como eje central y vincular. La globalidad en las sesiones con partidos y chiveos.
+          </p>
+          <div class="text-[11px] font-bold text-sky-400 tracking-wider uppercase">
+            Explorar · Jugar · Crear · Disfrutar
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Funcional -->
+        <div class="bg-slate-800/60 p-6 rounded-3xl border border-slate-700 hover:border-sky-500 transition-all">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-600/30 text-sky-300 flex items-center justify-center font-bold">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">FUNCIONAL</h4>
+          </div>
+          <p class="text-xs text-sky-300 font-semibold mb-2">Entrenamos para movernos mejor.</p>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Basado en aportes de Michael Boyle: buscamos el movimiento a través de los patrones de movimiento (dominantes de cadera/rodilla, empujes, tracciones, desplazamientos, rotaciones y estabilidad).
+          </p>
+          <div class="text-[11px] font-bold text-sky-400 tracking-wider uppercase">
+            Patrones de movimiento · Fuerza funcional
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- ENTRENAMIENTOS (Tarjetas con WhatsApp e Instagram) -->
+  <!-- ========================================================================= -->
+  <section id="entrenamientos" class="py-24 sm:py-32 px-6 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 reveal">
+        <span class="badge-celeste mb-3">Propuestas Deportivas</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Nuestros Entrenamientos
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Diferentes espacios diseñados según tus objetivos, edad y nivel. Siempre con la pelota como protagonista y el disfrute como motor.
+        </p>
+      </div>
+
+      <!-- Grid de Entrenamientos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="entrenamientos-container">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TIENDA OFICIAL NEMO (NUEVA SECCIÓN: Camperones, Remeras, Pelotas, Yorugua, Fobal) -->
+  <!-- ========================================================================= -->
+  <section id="tienda" class="py-24 sm:py-32 px-6 bg-white relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+        <div>
+          <span class="badge-celeste mb-3">Indumentaria &amp; Merchandising Oficial</span>
+          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+            TIENDA NEMO
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg mt-2 max-w-2xl">
+            Llevá la identidad de NEMO con vos. Indumentaria oficial, pelotas Panther y el juego de mesa, Yorugua, Fobal y más. Envíos y entregas directas en Maldonado. Punta del Este y Punta Ballena y por medio de agencias al resto del País.
+          </p>
+        </div>
+
+        <!-- Badge Colección Oficial -->
+        <div class="flex items-center gap-2">
+          <span class="bg-sky-50 text-sky-700 border border-sky-200 text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-sm">
+            <i data-lucide="sparkles" class="w-4 h-4 text-sky-600"></i>
+            <span>Colección Oficial Completa</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Grid de Productos de la Tienda -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="tienda-container">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- NUESTRO EQUIPO (Juan Manuel Onandi & Inés Irigoyen Co-Fundadores) -->
+  <!-- ========================================================================= -->
+  <section id="equipo" class="py-24 sm:py-32 px-6 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 reveal">
+        <span class="badge-celeste mb-3">Profesionales &amp; Formadores</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Nuestro Equipo
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Docentes y comunicadores apasionados con sólida formación universitaria y un profundo sentido humano.
+        </p>
+      </div>
+
+      <!-- Tarjetas de Equipo: Arriba (Inés, Juan, Camilo) / Abajo (Enzo, Lautaro) -->
+      <div class="max-w-6xl mx-auto" id="equipo-container">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- HORARIOS (Horarios exactos actualizados) -->
+  <!-- ========================================================================= -->
+  <section id="horarios" class="py-24 sm:py-32 px-6 bg-white relative">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+        <span class="badge-celeste mb-3">Planificá tu semana</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Horarios y Actividades
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Grupos reducidos para garantizar atención personalizada en el Club Punta del Este y espacios deportivos de Maldonado.
+        </p>
+      </div>
+
+      <!-- Filtros de Categoría -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10 reveal">
+        <button onclick="filterHorarios('Todos', this)" class="schedule-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-sky-600 text-white transition-all shadow-sm">
+          Todos los Horarios
+        </button>
+        <button onclick="filterHorarios('Funcional Fútbol', this)" class="schedule-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Funcional Fútbol
+        </button>
+        <button onclick="filterHorarios('Fútbol Femenino', this)" class="schedule-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Fútbol Femenino
+        </button>
+        <button onclick="filterHorarios('Adolescentes', this)" class="schedule-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Adolescentes
+        </button>
+        <button onclick="filterHorarios('Multideporte (Niños)', this)" class="schedule-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Multideporte (Niños)
+        </button>
+        <button onclick="filterHorarios('Personalizado', this)" class="schedule-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+          Personalizado
+        </button>
+      </div>
+
+      <!-- Lista de Horarios -->
+      <div class="space-y-4" id="horarios-list">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+      <!-- Callout informativo -->
+      <div class="mt-8 bg-sky-50 border border-sky-200 p-5 rounded-2xl flex items-center gap-4 text-sky-900 text-sm reveal">
+        <i data-lucide="info" class="w-6 h-6 text-sky-600 shrink-0"></i>
+        <span>¿Buscás horarios especiales o clases particulares? Escribinos por WhatsApp para coordinar una propuesta personalizada.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- NEMO EN MOVIMIENTO (Mosaico dinámico interactivo) -->
+  <!-- ========================================================================= -->
+  <section id="galeria" class="py-24 sm:py-32 px-6 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal">
+        <div>
+          <span class="badge-celeste mb-3">Galería Visual</span>
+          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+            NEMO en Movimiento
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg mt-2">
+            Momentos reales de entrenamientos, fútbol, encuentros y convivencia en Punta Ballena, Maldonado y Punta del Este.
+          </p>
+        </div>
+
+        <!-- Filtros de Galería -->
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterGaleria('todos', this)" class="galeria-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-900 text-white transition-colors">
+            Todos
+          </button>
+          <button onclick="filterGaleria('entrenamientos', this)" class="galeria-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+            Entrenamientos
+          </button>
+          <button onclick="filterGaleria('futbol', this)" class="galeria-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+            Fútbol
+          </button>
+          <button onclick="filterGaleria('comunidad', this)" class="galeria-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+            Comunidad
+          </button>
+        </div>
+      </div>
+
+      <!-- Mosaico Grid -->
+      <div class="mosaic-grid" id="galeria-mosaico">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- COMUNIDAD (Entrenar juntos también es encontrarnos) -->
+  <!-- ========================================================================= -->
+  <section class="py-20 px-6 bg-gradient-to-r from-sky-600 to-sky-700 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto text-center relative z-10 reveal">
+      <span class="bg-white/20 text-white text-xs font-bold uppercase px-3 py-1.5 rounded-full mb-4 inline-block">
+        Sentido de Pertenencia
+      </span>
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6">
+        Entrenar juntos también es encontrarnos.
+      </h2>
+      <p class="text-sky-100 text-base sm:text-xl font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+        NEMO busca ser más que un espacio de entrenamiento. Son la charlas previas y post entrenamiento, las comidas de grupo y el apoyo constante de los docentes y entre compañeros/as
+      </p>
+      <a data-wpp-btn href="#" class="btn-white text-sm sm:text-base">
+        <i data-lucide="users" class="w-5 h-5 text-sky-600"></i>
+        <span>SUMATE A LA COMUNIDAD</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TESTIMONIOS (Carrusel de Experiencias) -->
+  <!-- ========================================================================= -->
+  <section class="py-24 sm:py-32 px-6 bg-white relative">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <span class="badge-celeste mb-3">Voces de la Comunidad</span>
+        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          Lo que dicen de NEMO
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Personas reales que transformaron su relación con el entrenamiento y el fútbol.
+        </p>
+      </div>
+
+      <!-- Slider Wrapper -->
+      <div class="relative overflow-hidden mb-8" id="testimonios-wrapper">
+        <!-- Generado dinámicamente desde data.js -->
+      </div>
+
+      <!-- Controles Slider -->
+      <div class="flex items-center justify-center gap-6">
+        <button onclick="prevTestimonial()" class="w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-sky-50 hover:text-sky-600 transition-colors shadow-sm" aria-label="Testimonio anterior">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <div id="testimonios-dots" class="flex items-center gap-2"></div>
+        <button onclick="nextTestimonial()" class="w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-sky-50 hover:text-sky-600 transition-colors shadow-sm" aria-label="Siguiente testimonio">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTACTO / ¿TE SUMÁS? -->
+  <!-- ========================================================================= -->
+  <section id="contacto" class="py-24 sm:py-32 px-6 bg-slate-50 relative">
+    <div class="max-w-4xl mx-auto text-center reveal">
+      
+      <div class="w-20 h-20 mx-auto mb-8 rounded-3xl bg-sky-100 text-sky-600 flex items-center justify-center shadow-inner">
+        <i data-lucide="sparkles" class="w-10 h-10"></i>
+      </div>
+
+      <span class="badge-celeste mb-4">Comenzá Hoy</span>
+      <h2 class="text-5xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tight mb-6">
+        ¿TE SUMÁS?
+      </h2>
+
+      <p class="text-lg sm:text-2xl text-slate-700 font-medium max-w-2xl mx-auto mb-4 leading-relaxed">
+        No importa si hace años que entrenás o si estás empezando de cero.
+      </p>
+      <p class="text-xl sm:text-3xl text-sky-600 font-extrabold mb-10">
+        Hay un espacio para vos en NEMO.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <a data-wpp-btn href="#" data-wpp-msg="Hola NEMO, quiero empezar a entrenar con ustedes!" class="btn-celeste text-lg py-4 px-10 shadow-xl">
+          <i data-lucide="message-circle" class="w-6 h-6"></i>
+          <span>QUIERO EMPEZAR</span>
+        </a>
+      </div>
+
+      <!-- Datos directos de contacto -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 border-t border-slate-200 text-slate-600 text-sm">
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-sky-600">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </div>
+          <span class="font-bold text-slate-900">Instagram</span>
+          <a data-ig-link href="#" class="text-sky-600 hover:underline">@nemoentrenamiento</a>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-sky-600">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+          </div>
+          <span class="font-bold text-slate-900">WhatsApp</span>
+          <div class="flex items-center gap-2 text-sky-600 font-semibold">
+            <a data-wpp-btn href="#" class="hover:underline">098 871 258</a>
+            <span class="text-slate-300">·</span>
+            <a href="https://wa.me/59892952444?text=Hola%20NEMO%2C%20quer%C3%ADa%20consultar%20por%20los%20entrenamientos." target="_blank" rel="noopener noreferrer" class="hover:underline">092 952 444</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-sky-600">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <span class="font-bold text-slate-900">Ubicación</span>
+          <span>Punta Ballena · Maldonado · Punta del Este</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-slate-900 text-slate-400 py-16 px-6 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+      
+      <!-- Logo y concepto -->
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-sky-600 text-white flex items-center justify-center font-black text-sm">
+            N
+          </div>
+          <span class="text-xl font-black text-white tracking-wider">NEMO</span>
+        </div>
+        <p class="text-sm text-sky-400 font-semibold tracking-wide">
+          Todo tu ser en movimiento · Maldonado - Punta del Este - Uruguay
+        </p>
+      </div>
+
+      <!-- Enlaces Rápidos -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+        <a href="#que-es-nemo" class="hover:text-white transition-colors">NEMO</a>
+        <a href="#tienda" class="text-sky-300 font-bold hover:text-white transition-colors">Tienda</a>
+        <a href="#historia" class="hover:text-white transition-colors">Historia</a>
+        <a href="#entrenamientos" class="hover:text-white transition-colors">Entrenamientos</a>
+        <a href="#horarios" class="hover:text-white transition-colors">Horarios</a>
+        <a href="#galeria" class="hover:text-white transition-colors">Galería</a>
+        <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+      </div>
+
+      <!-- Redes & Copyright -->
+      <div class="flex flex-col items-center md:items-end gap-3">
+        <div class="flex items-center gap-3">
+          <a data-ig-link href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-sky-600 hover:text-white transition-colors" title="Instagram">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a data-wpp-btn href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-emerald-600 hover:text-white transition-colors" title="WhatsApp">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <span class="text-xs text-slate-500">NEMO Entrenamiento © 2026</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <!-- ========================================================================= -->
+  <a data-wpp-btn href="#" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+    <i data-lucide="message-circle" class="w-8 h-8"></i>
+    <span class="whatsapp-tooltip">¡Escribinos a WhatsApp!</span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- LIGHTBOX MODAL PARA FOTOS Y PRODUCTOS -->
+  <!-- ========================================================================= -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-sky-400 p-2 z-10" aria-label="Cerrar modal">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <div class="max-w-4xl max-h-[90vh] flex flex-col items-center p-4">
+      <img id="lightbox-img" src="" alt="NEMO" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl mb-4 bg-slate-950" />
+      <div id="lightbox-caption" class="text-center text-white"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
