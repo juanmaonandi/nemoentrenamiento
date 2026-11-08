@@ -1,0 +1,8 @@
+﻿# Binarios y archivos temporales
+cloudflared.exe
+*.zip
+temp_zip/
+
+# Metadatos del sistema operativo
+Thumbs.db
+.DS_Store

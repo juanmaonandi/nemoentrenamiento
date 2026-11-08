@@ -1,0 +1,493 @@
+/* ==========================================================================
+   NEMO ENTRENAMIENTO - Minimalist Athletic Stylesheet
+   Paleta: Celeste (#0284c7, #0ea5e9, #38bdf8, #e0f2fe), Blanco (#ffffff), 
+   Gris Claro (#f8fafc), Carbón Suave (#0f172a).
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+
+:root {
+  --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Colores */
+  --color-celeste-50: #f0f9ff;
+  --color-celeste-100: #e0f2fe;
+  --color-celeste-200: #bae6fd;
+  --color-celeste-300: #7dd3fc;
+  --color-celeste-400: #38bdf8;
+  --color-celeste-500: #0ea5e9;
+  --color-celeste-600: #0284c7;
+  --color-celeste-700: #0369a1;
+  --color-celeste-900: #0c4a6e;
+  
+  --color-white: #ffffff;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-400: #94a3b8;
+  --color-slate-600: #475569;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 25px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-celeste: 0 10px 25px -5px rgba(14, 165, 233, 0.25);
+  
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+  color: var(--color-slate-800);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Tipografía de jerarquía limpia */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-primary);
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Glassmorphism Header */
+.glass-header {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  transition: var(--transition-smooth);
+}
+
+.glass-header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* Botones con estilo minimalista y deportivo */
+.btn-celeste {
+  background-color: var(--color-celeste-600);
+  color: var(--color-white);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-celeste);
+  text-decoration: none;
+}
+
+.btn-celeste:hover {
+  background-color: var(--color-celeste-500);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(14, 165, 233, 0.35);
+}
+
+.btn-celeste:active {
+  transform: translateY(0);
+}
+
+.btn-outline-celeste {
+  border: 2px solid var(--color-celeste-600);
+  color: var(--color-celeste-700);
+  background: transparent;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-outline-celeste:hover {
+  background-color: var(--color-celeste-50);
+  border-color: var(--color-celeste-500);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background: var(--color-white);
+  color: var(--color-slate-900);
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.85rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.btn-white:hover {
+  background: var(--color-celeste-50);
+  color: var(--color-celeste-700);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* Efectos de badge y sutiles acentos */
+.badge-celeste {
+  background-color: var(--color-celeste-100);
+  color: var(--color-celeste-700);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Hero Section Styling */
+.hero-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.65) 50%, rgba(2, 132, 199, 0.45) 100%);
+  z-index: 1;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.03);
+  animation: heroZoom 20s infinite alternate ease-in-out;
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+/* Canvas de partículas neuronales / movimiento */
+#neural-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+/* Diagrama de Venn SVG y botones interactivos */
+.venn-svg-circle {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.venn-svg-circle:hover {
+  filter: brightness(1.2);
+}
+
+.venn-circle-btn {
+  transition: var(--transition-smooth);
+}
+
+.venn-circle-btn.active {
+  background-color: rgba(14, 165, 233, 0.25);
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Timeline Histórico */
+.timeline-track {
+  position: relative;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #bae6fd, #0284c7, #bae6fd);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .timeline-track::before {
+    left: 24px;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 4px solid var(--color-celeste-600);
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+  .timeline-dot {
+    left: 24px;
+  }
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--color-celeste-500);
+  transform: translateX(-50%) scale(1.3);
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.6);
+}
+
+/* Mosaico Galería Dinámica */
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .mosaic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mosaic-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+  }
+  
+  .mosaic-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .mosaic-item.wide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .mosaic-item.tall {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+
+.mosaic-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  height: 100%;
+  min-height: 220px;
+  cursor: pointer;
+  background-color: var(--color-slate-100);
+}
+
+.mosaic-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mosaic-card:hover img {
+  transform: scale(1.08);
+}
+
+.mosaic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.mosaic-card:hover .mosaic-overlay {
+  opacity: 1;
+}
+
+/* Botón flotante WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 62px;
+  height: 62px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  z-index: 99;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
+}
+
+.floating-whatsapp::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  opacity: 0.8;
+  animation: pulseWave 2s infinite;
+}
+
+@keyframes pulseWave {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Tooltip WhatsApp */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 75px;
+  background: #0f172a;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-lg);
+}
+
+.floating-whatsapp:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll reveal utility classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilos de tabla / tarjetas de horarios */
+@keyframes scheduleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-card {
+  animation: scheduleFadeIn 0.35s ease-out forwards;
+  transition: var(--transition-smooth);
+  border: 1px solid var(--color-slate-200);
+}
+
+.schedule-card:hover {
+  border-color: var(--color-celeste-400);
+  box-shadow: 0 10px 25px -4px rgba(14, 165, 233, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
