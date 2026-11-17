@@ -469,43 +469,15 @@ const NEMO_DATA = {
   // Testimonios
   testimonios: [
     {
-      nombre: "Fernanda Campos",
-      grupo: "Funcional Fútbol",
-      comentario: "Cami, Juanma y Enzo son unos genios, terrible paciencia de enseñar, aguantar y fundamental terrible respeto hacia nosotras, impagable eso gracias gracias: Las chicas son unas genias, el compañerismo y cuidado son fundamental. Que no se termine nunca esto por favor.",
-      estrellas: 5
-    },
-    {
       nombre: "Pablo Arbor",
       grupo: "",
       comentario: "Seriedad en la propuesta, continuidad, creatividad en las clases, organización.",
       estrellas: 5
     },
     {
-      nombre: "Lucía Fernández",
-      grupo: "Funcional Fútbol Femenino",
-      comentario: "En NEMO encontré un grupo increíble donde no hay vergüenza ni presiones. Nunca había jugado al fútbol y hoy no me pierdo un entrenamiento. El ambiente es pura buena onda.",
-      foto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
-      estrellas: 5
-    },
-    {
-      nombre: "Martín Rodríguez",
-      grupo: "Funcional Fútbol Adultos",
-      comentario: "Odiaba los gimnasios tradicionales con máquinas encerradas. NEMO me devolvió las ganas de entrenar: al aire libre, con pelota, con gente de primera y profesores que realmente saben.",
-      foto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
-      estrellas: 5
-    },
-    {
-      nombre: "Mariana & Gonzalo",
-      grupo: "Padres del Grupo Niños",
-      comentario: "Nuestros hijos esperan toda la semana para ir a NEMO. Los profes tienen una vocación y una calidez que transmiten valores más allá del deporte. Es hermoso ver cómo aprenden disfrutando.",
-      foto: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop",
-      estrellas: 5
-    },
-    {
-      nombre: "Federico Silva",
-      grupo: "Tecnificación & Funcional",
-      comentario: "La visión de Juanma, Camilo y Enzo es impecable. El nivel de detalle en cada ejercicio y el sentido humano es algo único en Maldonado y Punta del Este.",
-      foto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
+      nombre: "Fernanda Campos",
+      grupo: "Funcional Fútbol",
+      comentario: "Cami, Juanma y Enzo son unos genios, terrible paciencia de enseñar, aguantar y fundamental terrible respeto hacia nosotras, impagable eso gracias gracias: Las chicas son unas genias, el compañerismo y cuidado son fundamental. Que no se termine nunca esto por favor.",
       estrellas: 5
     }
   ]

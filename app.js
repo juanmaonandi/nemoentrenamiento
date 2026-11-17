@@ -130,8 +130,8 @@ function renderHistoria() {
       <div class="timeline-item flex flex-col md:flex-row items-center ${isEven ? 'md:flex-row-reverse' : ''} gap-6 md:gap-12 reveal">
         
         <!-- Contenido textual -->
-        <div class="w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? 'md:text-left md:pl-8' : 'md:text-right md:pr-8'}">
-          <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300">
+        <div class="w-full md:w-1/2 pl-9 sm:pl-12 md:pl-0 ${isEven ? 'md:text-left md:pl-8' : 'md:text-right md:pr-8'}">
+          <div class="bg-white p-5 sm:p-6 md:p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300">
             <div class="flex items-center gap-3 mb-3 ${isEven ? 'md:justify-start' : 'md:justify-end'}">
               <span class="text-3xl sm:text-4xl font-black text-sky-600 tracking-tight">${item.anio}</span>
               <span class="badge-celeste">${item.tag}</span>
@@ -145,9 +145,9 @@ function renderHistoria() {
         <div class="timeline-dot"></div>
 
         <!-- Tarjeta de Imagen -->
-        <div class="w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? 'md:pr-8' : 'md:pl-8'}">
+        <div class="w-full md:w-1/2 pl-9 sm:pl-12 md:pl-0 ${isEven ? 'md:pr-8' : 'md:pl-8'}">
           <div 
-            class="relative overflow-hidden rounded-3xl shadow-lg border border-slate-200/80 bg-slate-900 group cursor-pointer h-72 sm:h-84 md:h-96"
+            class="relative overflow-hidden rounded-3xl shadow-lg border border-slate-200/80 bg-slate-900 group cursor-pointer h-64 sm:h-80 md:h-96"
             onclick="openLightbox('${item.imagen}', 'NEMO ${item.anio} · ${item.titulo}', '${item.descripcion.replace(/'/g, "\\'")}')"
             title="Hacé clic para ampliar la foto"
           >
@@ -158,7 +158,7 @@ function renderHistoria() {
               loading="lazy" 
             />
             
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end justify-between p-5">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex items-end justify-between p-4 sm:p-5">
               <div>
                 <span class="badge-celeste text-[10px] mb-1">${item.tag}</span>
                 <span class="text-white text-xs sm:text-sm font-bold block">${item.titulo}</span>
@@ -235,40 +235,41 @@ function updateDimensionDetail(sectionId) {
 
   if (sectionId === 'centro') {
     detailContainer.innerHTML = `
-      <div class="animate-fadeIn bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 text-white p-8 md:p-10 rounded-3xl border border-sky-500/30 shadow-2xl relative overflow-hidden">
-        <div class="absolute -right-10 -bottom-10 opacity-10 text-white">
+      <div class="animate-fadeIn bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 text-white p-5 sm:p-7 md:p-10 rounded-3xl border border-sky-500/30 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-white pointer-events-none">
           <i data-lucide="users" class="w-64 h-64"></i>
         </div>
         <div class="relative z-10">
-          <div class="flex items-center gap-3 mb-4">
+          <div class="flex items-center gap-3 mb-4 flex-wrap">
             <span class="bg-sky-500 text-white font-black text-xs uppercase px-3.5 py-1.5 rounded-full tracking-wider shadow-md">
               Intersección Central
             </span>
             <span class="text-sky-300 text-xs font-semibold">Metodología Integrada</span>
           </div>
 
-          <h3 class="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
             NEMO / LA PERSONA
           </h3>
-          <p class="text-sky-300 text-base md:text-lg font-bold mb-5">
+          <p class="text-sky-300 text-sm sm:text-base md:text-lg font-bold mb-4 sm:mb-5">
             ${NEMO_DATA.metodologia.centroLema}
           </p>
-          <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+          <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed mb-6 font-normal">
             ${NEMO_DATA.metodologia.centroDetalle}
           </p>
 
-          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-slate-700/80 text-center">
-            <div class="bg-white/5 p-3 rounded-2xl border border-white/10">
-              <span class="text-xs font-black text-sky-400 block mb-0.5">01</span>
-              <span class="text-xs font-bold text-white uppercase">Socioafectivo</span>
+          <!-- 3 Tarjetas de la dimensión central: Vertical en móviles, 3 columnas en pantallas grandes -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-4 border-t border-slate-700/80">
+            <div class="bg-white/5 p-3 rounded-2xl border border-white/10 flex sm:flex-col items-center justify-start sm:justify-center gap-3 sm:gap-1 text-left sm:text-center transition-colors hover:bg-white/10">
+              <span class="text-xs font-black text-sky-400 bg-sky-500/20 px-2.5 py-1 rounded-lg sm:bg-transparent sm:p-0 sm:mb-0.5">01</span>
+              <span class="text-xs font-bold text-white uppercase tracking-wider">Socioafectivo</span>
             </div>
-            <div class="bg-white/5 p-3 rounded-2xl border border-white/10">
-              <span class="text-xs font-black text-sky-400 block mb-0.5">02</span>
-              <span class="text-xs font-bold text-white uppercase">Juego</span>
+            <div class="bg-white/5 p-3 rounded-2xl border border-white/10 flex sm:flex-col items-center justify-start sm:justify-center gap-3 sm:gap-1 text-left sm:text-center transition-colors hover:bg-white/10">
+              <span class="text-xs font-black text-sky-400 bg-sky-500/20 px-2.5 py-1 rounded-lg sm:bg-transparent sm:p-0 sm:mb-0.5">02</span>
+              <span class="text-xs font-bold text-white uppercase tracking-wider">Juego</span>
             </div>
-            <div class="bg-white/5 p-3 rounded-2xl border border-white/10">
-              <span class="text-xs font-black text-sky-400 block mb-0.5">03</span>
-              <span class="text-xs font-bold text-white uppercase">Funcional</span>
+            <div class="bg-white/5 p-3 rounded-2xl border border-white/10 flex sm:flex-col items-center justify-start sm:justify-center gap-3 sm:gap-1 text-left sm:text-center transition-colors hover:bg-white/10">
+              <span class="text-xs font-black text-sky-400 bg-sky-500/20 px-2.5 py-1 rounded-lg sm:bg-transparent sm:p-0 sm:mb-0.5">03</span>
+              <span class="text-xs font-bold text-white uppercase tracking-wider">Funcional</span>
             </div>
           </div>
         </div>
@@ -279,34 +280,34 @@ function updateDimensionDetail(sectionId) {
     if (!dim) return;
 
     detailContainer.innerHTML = `
-      <div class="animate-fadeIn bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 md:p-10 rounded-3xl border border-sky-500/20 shadow-2xl relative overflow-hidden">
-        <div class="absolute -right-10 -bottom-10 opacity-10 text-white">
+      <div class="animate-fadeIn bg-gradient-to-br from-slate-900 to-slate-800 text-white p-5 sm:p-7 md:p-10 rounded-3xl border border-sky-500/20 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-white pointer-events-none">
           <i data-lucide="${dim.icono}" class="w-64 h-64"></i>
         </div>
         <div class="relative z-10">
-          <div class="flex items-center justify-between gap-3 mb-4">
-            <span class="bg-sky-500/20 text-sky-300 border border-sky-400/30 text-xs font-bold uppercase px-3 py-1 rounded-full">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 mb-4">
+            <span class="bg-sky-500/20 text-sky-300 border border-sky-400/30 text-xs font-bold uppercase px-3 py-1 rounded-full self-start">
               Dimensión Metodológica
             </span>
-            <button onclick="selectVennSection('centro')" class="text-xs text-sky-300 hover:text-white flex items-center gap-1 underline underline-offset-4">
+            <button onclick="selectVennSection('centro')" class="text-xs text-sky-300 hover:text-white flex items-center gap-1 underline underline-offset-4 self-start sm:self-auto transition-colors">
               <span>Ver intersección central</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
 
-          <h3 class="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
             ${dim.nombre}
           </h3>
-          <p class="text-sky-300 text-base md:text-lg font-bold mb-5 leading-snug">
+          <p class="text-sky-300 text-sm sm:text-base md:text-lg font-bold mb-4 sm:mb-5 leading-snug">
             "${dim.lema}"
           </p>
-          <div class="text-slate-200 text-sm sm:text-base leading-relaxed mb-6 font-normal space-y-3">
+          <div class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed mb-6 font-normal space-y-3">
             ${dim.descripcion.split('\n\n').map(par => `<p>${par}</p>`).join('')}
           </div>
 
           <div class="flex flex-wrap items-center gap-2 pt-4 border-t border-slate-700/80">
             ${dim.tags.map(tag => `
-              <span class="bg-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
+              <span class="bg-white/10 text-white text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
                 ${tag}
               </span>
             `).join('')}
@@ -385,15 +386,15 @@ function renderEquipo() {
   if (!container) return;
 
   const cardHtml = (profe) => `
-    <div class="bg-white rounded-3xl p-6 md:p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center reveal">
-      <div class="relative w-40 h-40 rounded-full overflow-hidden mb-6 ring-4 ring-sky-100 shadow-md bg-sky-50">
+    <div class="bg-white rounded-3xl p-5 sm:p-6 md:p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center reveal">
+      <div class="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden mb-6 ring-4 ring-sky-100 shadow-md bg-sky-50">
         <img src="${profe.imagen}" alt="${profe.nombre}" class="w-full h-full object-cover ${profe.fotoPosicion || 'object-center'}" loading="lazy" />
       </div>
 
-      <h3 class="text-2xl font-extrabold text-slate-900 mb-1">${profe.nombre}</h3>
-      <span class="text-sky-600 font-bold text-sm mb-4 block">${profe.rol}</span>
+      <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1">${profe.nombre}</h3>
+      <span class="text-sky-600 font-bold text-xs sm:text-sm mb-4 block">${profe.rol}</span>
 
-      <div class="space-y-1.5 mb-5 w-full bg-slate-50 p-4 rounded-2xl flex-1 flex flex-col justify-center">
+      <div class="space-y-1.5 mb-5 w-full bg-slate-50 p-3.5 sm:p-4 rounded-2xl flex-1 flex flex-col justify-center">
         ${profe.titulos.map(t => `
           <div class="text-xs font-semibold text-slate-700 flex items-center justify-center gap-1.5">
             <i data-lucide="award" class="w-3.5 h-3.5 text-sky-600 shrink-0"></i>
@@ -402,7 +403,7 @@ function renderEquipo() {
         `).join('')}
       </div>
 
-      <p class="text-slate-600 text-sm leading-relaxed">${profe.bio}</p>
+      <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">${profe.bio}</p>
     </div>
   `;
 
@@ -462,35 +463,35 @@ function renderHorarios(filter = 'Todos') {
   }
 
   container.innerHTML = filtered.map(h => `
-    <div class="schedule-card bg-white p-6 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-5">
+    <div class="schedule-card bg-white p-5 sm:p-6 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-5">
       <div class="flex-1">
-        <div class="flex items-center gap-2.5 mb-2">
+        <div class="flex items-center gap-2.5 mb-2 flex-wrap">
           <span class="badge-celeste">${h.categoria}</span>
           <span class="text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
             ${h.cupos}
           </span>
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">${h.actividad}</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">${h.actividad}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-600">
           <div class="flex items-center gap-2">
-            <i data-lucide="calendar" class="w-4 h-4 text-sky-600"></i>
+            <i data-lucide="calendar" class="w-4 h-4 text-sky-600 shrink-0"></i>
             <span>${h.dias}</span>
           </div>
           <div class="flex items-center gap-2">
-            <i data-lucide="clock" class="w-4 h-4 text-sky-600"></i>
+            <i data-lucide="clock" class="w-4 h-4 text-sky-600 shrink-0"></i>
             <span class="font-semibold text-slate-800">${h.hora}</span>
           </div>
           <div class="flex items-center gap-2 sm:col-span-2">
-            <i data-lucide="map-pin" class="w-4 h-4 text-sky-600"></i>
+            <i data-lucide="map-pin" class="w-4 h-4 text-sky-600 shrink-0"></i>
             <span>${h.lugar}</span>
           </div>
         </div>
       </div>
 
       <div class="md:text-right shrink-0 flex flex-col sm:flex-row md:flex-col gap-2">
-        <a href="${getWhatsAppUrl(h.mensajeWpp)}" target="_blank" rel="noopener noreferrer" class="btn-outline-celeste w-full md:w-auto text-sm">
-          <span>CONSULTAR DISPONIBILIDAD</span>
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <a href="${getWhatsAppUrl(h.mensajeWpp)}" target="_blank" rel="noopener noreferrer" class="btn-outline-celeste w-full md:w-auto text-xs sm:text-sm py-2.5 px-4 sm:px-5 justify-center">
+          <span class="tracking-wide">CONSULTAR DISPONIBILIDAD</span>
+          <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
         </a>
       </div>
     </div>
@@ -561,15 +562,15 @@ function renderTestimonios() {
 
   container.innerHTML = NEMO_DATA.testimonios.map((t, idx) => `
     <div class="testimonial-slide w-full shrink-0 transition-opacity duration-500 ${idx === 0 ? 'opacity-100 block' : 'opacity-0 hidden'}" data-slide="${idx}">
-      <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 text-center">
-        <div class="flex justify-center gap-1 text-amber-400 mb-6">
-          ${Array(t.estrellas).fill('<i data-lucide="star" class="w-5 h-5 fill-current"></i>').join('')}
+      <div class="max-w-3xl mx-auto bg-white p-5 sm:p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 text-center">
+        <div class="flex justify-center gap-1 text-amber-400 mb-5 sm:mb-6">
+          ${Array(t.estrellas).fill('<i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"></i>').join('')}
         </div>
-        <p class="text-lg md:text-2xl font-medium text-slate-800 italic mb-8 leading-relaxed">
+        <p class="text-base sm:text-lg md:text-2xl font-medium text-slate-800 italic mb-6 sm:mb-8 leading-relaxed">
           "${t.comentario}"
         </p>
-        <div class="pt-6 border-t border-slate-100 mt-6 inline-block text-center">
-          <h4 class="font-bold text-slate-900 text-lg sm:text-xl">${t.nombre}</h4>
+        <div class="pt-5 sm:pt-6 border-t border-slate-100 mt-5 sm:mt-6 inline-block text-center">
+          <h4 class="font-bold text-slate-900 text-base sm:text-xl">${t.nombre}</h4>
           ${t.grupo ? `<p class="text-xs sm:text-sm text-sky-600 font-semibold mt-1">${t.grupo}</p>` : ''}
         </div>
       </div>
